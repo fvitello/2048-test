@@ -3,10 +3,15 @@ interface DataTableProps {
     columns: number;
 }
 
+const getRandomNumber = () => {
+    const randomNumber = Math.random();
+    return randomNumber < 0.9 ? 2 : 4;
+  };
+
 const DataTable: React.FC<DataTableProps> = (props) => {
     let matrix = Array(props.rows);
     for (let i = 0; i < props.rows; i++) {
-      matrix[i] = new Array(props.columns).fill(0);
+      matrix[i] = new Array(props.columns).fill(null).map(() => getRandomNumber());
     }
   
     return (
