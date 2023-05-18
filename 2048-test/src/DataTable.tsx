@@ -5,7 +5,7 @@ interface DataTableProps {
 
 const getRandomNumber = () => {
     const randomNumber = Math.random();
-    return randomNumber < 0.9 ? 2 : 4;
+    return randomNumber < 0.5 ? 2 : 4;
   };
 
 const DataTable: React.FC<DataTableProps> = (props) => {
@@ -16,7 +16,7 @@ const DataTable: React.FC<DataTableProps> = (props) => {
   
     return (
       <>
-      <div>Ciao questo è test 1</div>
+      <div>Ciao questo è test 2</div>
         <table>
         <tbody>
           {matrix.map((row, rowIndex) => (
@@ -28,6 +28,7 @@ const DataTable: React.FC<DataTableProps> = (props) => {
           ))}
         </tbody>
       </table>
+      <div> questa è la fine</div>
 
       </>
     );
